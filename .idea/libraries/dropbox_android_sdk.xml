@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="dropbox-android-sdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/gpslogger/src/main/libs/dropbox-android-sdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

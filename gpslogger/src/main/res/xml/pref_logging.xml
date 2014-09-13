@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:key="gpslogger_preferences"
+                  android:title="@string/pref_logging_title"
+                  android:summary="@string/pref_logging_summary">
+
+
+        <CheckBoxPreference
+            android:key="log_gpx"
+            android:title="@string/log_gpx_title"
+            android:summary="@string/log_gpx_summary"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference
+            android:key="log_kml"
+            android:summary="@string/log_kml_summary"
+            android:title="@string/log_kml_title"/>
+
+        <Preference
+            android:title="@string/log_customurl_title"
+            android:summary="@string/log_customurl_summary"
+            android:key="customurl_setup">
+            <intent android:action="com.geotrackin.gpslogger.CUSTOMURL_SETUP"/>
+        </Preference>
+
+        <CheckBoxPreference
+            android:key="log_opengts"
+            android:summary="@string/log_opengts_summary"
+            android:title="@string/log_opengts_title"/>
+
+        <CheckBoxPreference
+            android:key="log_plain_text"
+            android:summary="@string/log_plain_text_summary"
+            android:title="@string/log_plain_text_title"/>
+
+        <CheckBoxPreference
+            android:key="log_nmea"
+            android:title="@string/log_nmea_title"
+            android:summary="@string/log_nmea_summary" />
+
+    <PreferenceCategory
+        android:title="@string/pref_filedetails_title"
+        >
+
+        <Preference
+            android:key="gpslogger_folder"
+            android:title="@string/gpslogger_folder_title"
+            android:summary="@string/gpslogger_folder_summary"></Preference>
+
+        <ListPreference
+            android:key="new_file_creation"
+            android:title="@string/new_file_creation_title"
+            android:summary="@string/new_file_creation_summary"
+            android:entries="@array/filecreation_entries"
+            android:defaultValue="onceaday"
+            android:entryValues="@array/filecreation_values"/>
+        <EditTextPreference
+            android:key="new_file_custom_name"
+            android:title="@string/new_file_custom_title"
+            android:summary="@string/new_file_custom_summary"
+            android:dialogTitle="@string/new_file_custom_title"
+            android:dialogMessage="@string/new_file_custom_message"
+            android:defaultValue="gpslogger"
+            />
+        <CheckBoxPreference
+            android:key="new_file_prefix_serial"
+            android:title="@string/new_file_prefix_serial_title"
+            android:summary="@string/new_file_prefix_serial_summary"
+            android:defaultValue="false"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_performance_title">
+
+
+        <MultiSelectListPreference
+            android:entries="@array/listeners"
+            android:entryValues="@array/listeners_values"
+            android:defaultValue="@array/listeners_values"
+            android:key="listeners"
+            android:summary="@string/listeners_summary"
+            android:title="@string/listeners_title" />
+
+        <EditTextPreference
+            android:key="time_before_logging"
+            android:title="@string/time_before_logging_title"
+            android:summary="@string/time_before_logging_summary"
+            android:dialogTitle="@string/time_before_logging_dialog_title"
+            android:numeric="integer"
+            android:maxLength="4"
+            android:hint="@string/time_before_logging_hint"/>
+
+        <CheckBoxPreference
+            android:key="keep_fix"
+            android:summary="@string/keep_fix_summary"
+            android:title="@string/keep_fix_title"/>
+
+
+        <EditTextPreference
+            android:key="distance_before_logging"
+            android:title="@string/distance_filter_title"
+            android:summary="@string/distance_filter_summary"
+            android:dialogTitle="@string/settings_distance_in_meters"
+            android:numeric="integer"
+            android:maxLength="4"
+            android:hint="@string/settings_enter_meters"/>
+
+
+        <EditTextPreference
+            android:key="accuracy_before_logging"
+            android:title="@string/accuracy_filter_title"
+            android:summary="@string/accuracy_filter_summary"
+            android:dialogTitle="@string/settings_accuracy_in_meters"
+            android:numeric="integer"
+            android:maxLength="4"
+            android:hint="@string/settings_enter_meters"/>
+
+        <EditTextPreference
+            android:key="retry_time"
+            android:title="@string/retry_time_title"
+            android:summary="@string/retry_time_summary"
+            android:dialogTitle="@string/retry_time_dialog_title"
+            android:numeric="integer"
+            android:maxLength="4"
+            android:hint="@string/retry_time_hint"/>
+
+        <EditTextPreference
+            android:key="absolute_timeout"
+            android:title="@string/absolute_timeout_title"
+            android:summary="@string/absolute_timeout_summary"
+            android:dialogTitle="@string/retry_time_dialog_title"
+            android:numeric="integer"
+            android:maxLength="4"
+            android:hint="@string/retry_time_hint"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
