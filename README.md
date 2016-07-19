@@ -12,3 +12,6 @@ Key features:
 
 
 The app is based on the great work of Mendhak and his app GPSLogger (released under GPL v2).
+
+Get the app as binary version at Google Play:
+https://play.google.com/store/apps/details?id=com.geotrackin.gpslogger
